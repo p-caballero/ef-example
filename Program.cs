@@ -8,7 +8,8 @@
     {
         static void Main(string[] args)
         {
-            const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Database=ContosoPizza;Integrated Security=true;";
+            // const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Database=ContosoPizza;Integrated Security=true;"; // SQL Server LocalDB
+            const string connectionString = "Data Source=.;Database=ContosoPizza;Integrated Security=true;"; // SQL Server
 
             connectionString.PrintConnectionString(); // Método de extensión
 
