@@ -23,6 +23,8 @@
         {
             modelBuilder.Entity<Order>(entity =>
             {
+                entity.HasKey(entity => entity.Id);
+
                 entity.HasIndex(e => e.CustomerId, "IX_Orders_CustomerId");
 
                 entity.HasOne(d => d.Customer)
@@ -32,6 +34,8 @@
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
+                entity.HasKey(entity => entity.Id);
+
                 entity.HasIndex(e => e.OrderId, "IX_OrderDetails_OrderId");
 
                 entity.HasIndex(e => e.ProductId, "IX_OrderDetails_ProductId");
@@ -47,6 +51,8 @@
 
             modelBuilder.Entity<Product>(entity =>
             {
+                entity.HasKey(entity => entity.Id);
+
                 entity.Property(e => e.Price).HasColumnType("decimal(6, 2)");
             });
             OnModelCreatingPartial(modelBuilder);
