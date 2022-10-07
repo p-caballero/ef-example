@@ -20,14 +20,16 @@
 
             context.Database.EnsureCreated();
 
-            context.Customers.Add(new Storage.Entities.Customer()
-            {
-                FirstName = "Luís",
-                LastName = "García",
-                Email = "luis.garcia@gmail.com"
-            });
+            //context.Customers.Add(new Storage.Entities.Customer()
+            //{
+            //    FirstName = "Luís",
+            //    LastName = "García",
+            //    Email = "luis.garcia@gmail.com"
+            //});
 
-            context.SaveChanges();
+            //context.SaveChanges();
+
+            // context.Dispose(); // No es necesario por el using
         }
     }
 }
