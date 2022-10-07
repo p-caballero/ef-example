@@ -1,5 +1,6 @@
 ﻿namespace EfExample
 {
+    using EfExample.Infrastructure.Extensions;
     using EfExample.Storage;
     using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,8 @@
         static void Main(string[] args)
         {
             const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Database=ContosoPizza;Integrated Security=true;";
+
+            connectionString.PrintConnectionString(); // Método de extensión
 
             var options = new DbContextOptionsBuilder<ContosoPizzaContext>()
                 .UseSqlServer(connectionString)
